@@ -24,11 +24,11 @@ jobs:
 
       - name: Bundle install for iOS Gemfile
         timeout-minutes: 5
-        run: cd ./MTest CICD && bundle install
+        run: cd ./MTest\ CICD && bundle install
 
 
       - name: Build and Deploy to TestFlight
-        run: cd ./MTest CICD && bundle exec fastlane ios release_beta
+        run: cd ./MTest\ CICD && bundle exec fastlane ios release_beta
         env:
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
           ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
