@@ -66,9 +66,6 @@ platform :ios do
       readonly: true,
     )
 
-    # build_number = bump_build_number()
-    # version_name = get_version_name()
-
 
     app_identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
 

@@ -1,0 +1,46 @@
+name: Build Upload
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy-ios:
+    runs-on: macos-latest
+  
+    steps:
+      - name: Set up git and fetch all history for all branches and tags
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.2"
+          bundler-cache: true
+
+
+      - name: Bundle install for iOS Gemfile
+        timeout-minutes: 5
+        run: cd ./MTest CICD && bundle install
+
+
+      - name: Build and Deploy to TestFlight
+        run: cd ./MTest CICD && bundle exec fastlane ios release_beta
+        env:
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+          MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.GIT_PAT_TOKEN }}
+          MATCH_KEYCHAIN_PASSWORD: ${{ secrets.MATCH_KEYCHAIN_PASSWORD }}
+
+
+      - name: Upload dsym to artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dsym file
+          path: ${{ github.workspace }}/*.app.dSYM.zip
+
+           
