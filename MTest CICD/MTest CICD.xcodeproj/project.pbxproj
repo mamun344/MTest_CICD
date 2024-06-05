@@ -33,9 +33,9 @@
 		8467E3062C10333C0006739B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8467E3082C10333C0006739B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8467E31B2C10E3D30006739B /* MTest CICD Stage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MTest CICD Stage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8467E31D2C10E45D0006739B /* MTest CICD Stage.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MTest CICD Stage.plist"; sourceTree = "<group>"; };
 		8467E31F2C10E5130006739B /* Config Prod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Config Prod.swift"; sourceTree = "<group>"; };
 		8467E3212C10E51E0006739B /* Config Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Config Stage.swift"; sourceTree = "<group>"; };
+		8467E3242C10E98D0006739B /* Info Stage.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info Stage.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 				8467E3002C10333B0006739B /* Main.storyboard */,
 				8467E3032C10333C0006739B /* Assets.xcassets */,
 				8467E3052C10333C0006739B /* LaunchScreen.storyboard */,
-				8467E31D2C10E45D0006739B /* MTest CICD Stage.plist */,
+				8467E3242C10E98D0006739B /* Info Stage.plist */,
 				8467E3082C10333C0006739B /* Info.plist */,
 			);
 			path = "MTest CICD";
@@ -150,7 +150,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8467E2F22C10333B0006739B /* Build configuration list for PBXProject "MTest CICD Stage" */;
+			buildConfigurationList = 8467E2F22C10333B0006739B /* Build configuration list for PBXProject "MTest CICD" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -436,7 +436,7 @@
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = X96K495WW9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MTest CICD/MTest CICD Stage.plist";
+				INFOPLIST_FILE = "MTest CICD/Info Stage.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -470,7 +470,7 @@
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = X96K495WW9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MTest CICD/MTest CICD Stage.plist";
+				INFOPLIST_FILE = "MTest CICD/Info Stage.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -495,7 +495,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8467E2F22C10333B0006739B /* Build configuration list for PBXProject "MTest CICD Stage" */ = {
+		8467E2F22C10333B0006739B /* Build configuration list for PBXProject "MTest CICD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8467E3092C10333C0006739B /* Debug */,

@@ -70,7 +70,7 @@ platform :ios do
     app_identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
 
     current_version = get_version_number(
-      target: "MTest CICD Stage" # replace with your main target, required if you have more than one non-test target
+      target: "MTest CICD" # replace with your main target, required if you have more than one non-test target
     )
 
     puts "*** current_version #{current_version} ***"
