@@ -92,6 +92,7 @@ platform :ios do
   
     puts "*** Build and sign iOS app release ***"
     build_app(
+      scheme: "MTest CICD",
       skip_build_archive: false,
       # archive_path: "BUILD/MCTestCD.xcarchive",
       # sdk: "15.0"
