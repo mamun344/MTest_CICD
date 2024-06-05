@@ -13,6 +13,14 @@
 		8467E3022C10333B0006739B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8467E3002C10333B0006739B /* Main.storyboard */; };
 		8467E3042C10333C0006739B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8467E3032C10333C0006739B /* Assets.xcassets */; };
 		8467E3072C10333C0006739B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8467E3052C10333C0006739B /* LaunchScreen.storyboard */; };
+		8467E3102C10E3D30006739B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E2FE2C10333B0006739B /* ViewController.swift */; };
+		8467E3112C10E3D30006739B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E2FA2C10333B0006739B /* AppDelegate.swift */; };
+		8467E3122C10E3D30006739B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E2FC2C10333B0006739B /* SceneDelegate.swift */; };
+		8467E3152C10E3D30006739B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8467E3052C10333C0006739B /* LaunchScreen.storyboard */; };
+		8467E3162C10E3D30006739B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8467E3032C10333C0006739B /* Assets.xcassets */; };
+		8467E3172C10E3D30006739B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8467E3002C10333B0006739B /* Main.storyboard */; };
+		8467E3202C10E5130006739B /* Config Prod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E31F2C10E5130006739B /* Config Prod.swift */; };
+		8467E3232C10E5200006739B /* Config Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467E3212C10E51E0006739B /* Config Stage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +32,21 @@
 		8467E3032C10333C0006739B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8467E3062C10333C0006739B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8467E3082C10333C0006739B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8467E31B2C10E3D30006739B /* MTest CICD Stage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MTest CICD Stage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8467E31D2C10E45D0006739B /* MTest CICD Stage.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MTest CICD Stage.plist"; sourceTree = "<group>"; };
+		8467E31F2C10E5130006739B /* Config Prod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Config Prod.swift"; sourceTree = "<group>"; };
+		8467E3212C10E51E0006739B /* Config Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Config Stage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8467E2F42C10333B0006739B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8467E3132C10E3D30006739B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				8467E2F72C10333B0006739B /* MTest CICD.app */,
+				8467E31B2C10E3D30006739B /* MTest CICD Stage.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,12 +79,23 @@
 				8467E2FA2C10333B0006739B /* AppDelegate.swift */,
 				8467E2FC2C10333B0006739B /* SceneDelegate.swift */,
 				8467E2FE2C10333B0006739B /* ViewController.swift */,
+				8467E31E2C10E4FC0006739B /* Configs */,
 				8467E3002C10333B0006739B /* Main.storyboard */,
 				8467E3032C10333C0006739B /* Assets.xcassets */,
 				8467E3052C10333C0006739B /* LaunchScreen.storyboard */,
+				8467E31D2C10E45D0006739B /* MTest CICD Stage.plist */,
 				8467E3082C10333C0006739B /* Info.plist */,
 			);
 			path = "MTest CICD";
+			sourceTree = "<group>";
+		};
+		8467E31E2C10E4FC0006739B /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				8467E31F2C10E5130006739B /* Config Prod.swift */,
+				8467E3212C10E51E0006739B /* Config Stage.swift */,
+			);
+			path = Configs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +118,23 @@
 			productReference = 8467E2F72C10333B0006739B /* MTest CICD.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8467E30E2C10E3D30006739B /* MTest CICD Stage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8467E3182C10E3D30006739B /* Build configuration list for PBXNativeTarget "MTest CICD Stage" */;
+			buildPhases = (
+				8467E30F2C10E3D30006739B /* Sources */,
+				8467E3132C10E3D30006739B /* Frameworks */,
+				8467E3142C10E3D30006739B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MTest CICD Stage";
+			productName = "MTest CICD";
+			productReference = 8467E31B2C10E3D30006739B /* MTest CICD Stage.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -102,7 +150,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8467E2F22C10333B0006739B /* Build configuration list for PBXProject "MTest CICD" */;
+			buildConfigurationList = 8467E2F22C10333B0006739B /* Build configuration list for PBXProject "MTest CICD Stage" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,6 +164,7 @@
 			projectRoot = "";
 			targets = (
 				8467E2F62C10333B0006739B /* MTest CICD */,
+				8467E30E2C10E3D30006739B /* MTest CICD Stage */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +180,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8467E3142C10E3D30006739B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8467E3152C10E3D30006739B /* LaunchScreen.storyboard in Resources */,
+				8467E3162C10E3D30006739B /* Assets.xcassets in Resources */,
+				8467E3172C10E3D30006739B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -141,6 +200,18 @@
 				8467E2FF2C10333B0006739B /* ViewController.swift in Sources */,
 				8467E2FB2C10333B0006739B /* AppDelegate.swift in Sources */,
 				8467E2FD2C10333B0006739B /* SceneDelegate.swift in Sources */,
+				8467E3202C10E5130006739B /* Config Prod.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8467E30F2C10E3D30006739B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8467E3102C10E3D30006739B /* ViewController.swift in Sources */,
+				8467E3112C10E3D30006739B /* AppDelegate.swift in Sources */,
+				8467E3122C10E3D30006739B /* SceneDelegate.swift in Sources */,
+				8467E3232C10E5200006739B /* Config Stage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,10 +424,78 @@
 			};
 			name = Release;
 		};
+		8467E3192C10E3D30006739B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 16;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = X96K495WW9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MTest CICD/MTest CICD Stage.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 4.0.7;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bongosolutions.bongo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match AppStore com.bongosolutions.bongo";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8467E31A2C10E3D30006739B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 16;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = X96K495WW9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MTest CICD/MTest CICD Stage.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 4.0.7;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bongosolutions.bongo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match AppStore com.bongosolutions.bongo";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8467E2F22C10333B0006739B /* Build configuration list for PBXProject "MTest CICD" */ = {
+		8467E2F22C10333B0006739B /* Build configuration list for PBXProject "MTest CICD Stage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8467E3092C10333C0006739B /* Debug */,
@@ -370,6 +509,15 @@
 			buildConfigurations = (
 				8467E30C2C10333C0006739B /* Debug */,
 				8467E30D2C10333C0006739B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8467E3182C10E3D30006739B /* Build configuration list for PBXNativeTarget "MTest CICD Stage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8467E3192C10E3D30006739B /* Debug */,
+				8467E31A2C10E3D30006739B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
