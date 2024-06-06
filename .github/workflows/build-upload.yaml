@@ -37,10 +37,10 @@ jobs:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
 
 
-      - name: Upload dsym to artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: dsym file
-          path: ${{ github.workspace }}/*.app.dSYM.zip
+      # - name: Upload dsym to artifacts
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: dsym file
+      #     path: ${{ github.workspace }}/*.app.dSYM.zip
 
            
