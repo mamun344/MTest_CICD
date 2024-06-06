@@ -106,8 +106,8 @@ platform :ios do
       # sdk: "15.0"
     )
   
-    # puts "*** Upload app to testflight ***"
-    # upload_to_testflight(api_key: api_key)
+    puts "*** Upload app to testflight ***"
+    upload_to_testflight(api_key: api_key)
   
   end
 
