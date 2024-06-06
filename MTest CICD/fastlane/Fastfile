@@ -101,7 +101,7 @@ platform :ios do
     )
 
     increment_build_number_in_xcodeproj(
-      version_number: new_version.to_s,
+      build_number: new_version.to_s,
       target: "MTest CICD"
     )
 
