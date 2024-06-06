@@ -1,8 +1,8 @@
 source "https://rubygems.org"
 
 
-plugins_path = File.join(File.expand_path("..", __FILE__), 'fastlane', 'Pluginfile')
-eval_gemfile(plugins_path)
+# plugins_path = File.join(File.expand_path("..", __FILE__), 'fastlane', 'Pluginfile')
+# eval_gemfile(plugins_path)
 
 gem "fastlane", "2.220.0"
 gem "bundler", "2.5.11"
