@@ -13,6 +13,9 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
+fastlane_require 'versioning'
+
+
 default_platform(:ios)
 
 
@@ -99,8 +102,8 @@ platform :ios do
       # sdk: "15.0"
     )
   
-    puts "*** Upload app to testflight ***"
-    upload_to_testflight(api_key: api_key)
+    # puts "*** Upload app to testflight ***"
+    # upload_to_testflight(api_key: api_key)
   
   end
 
