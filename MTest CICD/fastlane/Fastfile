@@ -100,6 +100,11 @@ platform :ios do
       build_number: new_version.to_s,
     )
 
+    increment_build_number_in_xcodeproj(
+      version_number: new_version.to_s,
+      target: "MTest CICD"
+    )
+
     # puts "*** increment_build_number #{increment_build_number} ***"
   
     puts "*** Build and sign iOS app release ***"
