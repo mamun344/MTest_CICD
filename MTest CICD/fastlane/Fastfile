@@ -91,9 +91,13 @@ platform :ios do
     #   build_number: latest_build_number,
     # )
 
+    new_version = latest_build_number+1
+    puts "*** new version: #{new_version} ***"
+
+
     increment_build_number_in_plist(
       target: "MTest CICD",
-      build_number: (latest_build_number+1).to_s,
+      build_number: new_version.to_s,
     )
 
     # puts "*** increment_build_number #{increment_build_number} ***"
