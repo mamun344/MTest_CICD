@@ -85,7 +85,8 @@ platform :ios do
 
 
     increment_build_number(
-      build_number: (latest_build_number),
+      target: "MTest CICD"
+      build_number: latest_build_number,
     )
 
     puts "*** increment_build_number #{increment_build_number} ***"
