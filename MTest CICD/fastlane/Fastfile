@@ -71,9 +71,10 @@ platform :ios do
 
 
     app_identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
+    app_target = "MTest CICD"
 
     current_version = get_version_number(
-      target: "MTest CICD" # replace with your main target, required if you have more than one non-test target
+      target: app_target
     )
 
     puts "*** current_version #{current_version} ***"
@@ -91,25 +92,25 @@ platform :ios do
     #   build_number: latest_build_number,
     # )
 
-    new_version = latest_build_number+1
+    new_version = (latest_build_number+1).to_s
     puts "*** new version: #{new_version} ***"
 
 
-    increment_build_number_in_plist(
-      target: "MTest CICD",
-      build_number: new_version.to_s,
-    )
+    # increment_build_number_in_plist(
+    #   target: app_target,
+    #   build_number: new_version,
+    # )
 
     increment_build_number_in_xcodeproj(
-      build_number: new_version.to_s,
-      target: "MTest CICD"
+      target: app_target,
+      build_number: new_version
     )
 
     # puts "*** increment_build_number #{increment_build_number} ***"
   
     puts "*** Build and sign iOS app release ***"
     build_app(
-      scheme: "MTest CICD",
+      scheme: app_target,
       skip_build_archive: false,
       # archive_path: "BUILD/MCTestCD.xcarchive",
       # sdk: "15.0"
