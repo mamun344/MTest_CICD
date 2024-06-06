@@ -37,26 +37,10 @@ platform :ios do
   end
 
 
-  def bump_build_number()
-    latest_build_number = latest_testflight_build_number(initial_build_number: 0)
-    return (latest_build_number + 1)
-  end
-
-  def get_version_name()
-    version_name = lane_context[SharedValues::LATEST_TESTFLIGHT_VERSION]
-  
-    if version_name.empty?
-      puts "*** Version name is empty, add version 1.0.0 ***"
-      version_name = "1.0.0"
-    end
-  
-    return version_name
-  end
-
-
   desc "Release a new build to Apple Store"
     lane :release_beta do
     commit = last_git_commit
+
     puts "*** Starting iOS release for commit(#{commit[:abbreviated_commit_hash]}) ***"
   
     #read api key from app_store_connect_api_key lane variable
@@ -71,7 +55,8 @@ platform :ios do
 
 
     app_identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
-    app_target = "MTest CICD"
+
+    app_target = "MTest CICD Stage"
 
     current_version = get_version_number(
       target: app_target
